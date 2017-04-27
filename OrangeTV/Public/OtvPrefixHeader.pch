@@ -1,0 +1,70 @@
+//
+//  OtvPrefixHeader.pch
+//  OrangeTV
+//
+//  Created by PengchengWang on 16/3/10.
+//  Copyright © 2016年 pengchengWang. All rights reserved.
+//
+
+#import "URLRequestManager.h"
+#import <AFNetworking.h>
+#import <UIImageView+WebCache.h>
+#import "SingleClass.h"
+#import <Masonry.h>
+#import <MBProgressHUD.h>
+#import <AVOSCloud.h>
+#import <UMSocial.h>
+#import <FMDB.h>
+
+#ifndef OtvPrefixHeader_pch
+#define OtvPrefixHeader_pch
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+//颜色
+#define kColor(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+/**
+ *  宏定义单例
+ */
+#define single_interface(className)\
++(instancetype)share##className;
+#define single_implementantion(className)\
+static className *_instance = nil;\
++(instancetype)share##className{\
+static dispatch_once_t onceToken;\
+dispatch_once(&onceToken, ^{\
+_instance = [[[self class] alloc]init];\
+});\
+return _instance;\
+}\
++(instancetype)allocWithZone:(struct _NSZone *)zone{\
+static dispatch_once_t onceToken;\
+dispatch_once(&onceToken, ^{\
+_instance = [super allocWithZone:zone];\
+});\
+return _instance;\
+}\
+/**
+*  上线模式不打印
+*/
+#ifndef __OPTIMIZE__
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+# define NSLog(...) {}
+#endif
+
+////////////////////////////////////////////////////////////////////////
+
+#define kVideoInfoUrl @"http://magicapi.vmovier.com/magicapi/find?json=1&p=1"
+#define kLeanCloudID @"P66DgoeB7aY3T2imQv2Oe4rF-gzGzoHsz"
+#define kLeanCloudKey @"4aW2Ikeewk9tpfrOlpgNdl49"
+
+
+
+
+
+
+
+
+
+
+#endif /* OtvPrefixHeader_pch */

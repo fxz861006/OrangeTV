@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutUsViewController">
+            <connections>
+                <outlet property="aboutUsLabel" destination="rVB-NX-Csv" id="3jT-MX-go5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVs-8B-zbE">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WzR-fU-emm">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="570"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVB-NX-Csv">
+                                    <rect key="frame" x="20" y="20" width="560" height="0.0"/>
+                                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <color key="textColor" white="0.064951508620689657" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="rVB-NX-Csv" secondAttribute="trailing" id="1eu-oZ-lWE"/>
+                                <constraint firstAttribute="bottom" secondItem="rVB-NX-Csv" secondAttribute="bottom" id="BNk-19-Kfl"/>
+                                <constraint firstItem="rVB-NX-Csv" firstAttribute="top" secondItem="WzR-fU-emm" secondAttribute="top" id="Cdj-xZ-oM6"/>
+                                <constraint firstItem="rVB-NX-Csv" firstAttribute="leading" secondItem="WzR-fU-emm" secondAttribute="leading" constant="20" id="Zy9-c3-W55"/>
+                                <constraint firstItem="rVB-NX-Csv" firstAttribute="leading" secondItem="WzR-fU-emm" secondAttribute="leading" id="azV-bM-ji3"/>
+                                <constraint firstAttribute="trailing" secondItem="rVB-NX-Csv" secondAttribute="trailing" constant="20" id="g3M-ci-Uzi"/>
+                                <constraint firstItem="rVB-NX-Csv" firstAttribute="top" secondItem="WzR-fU-emm" secondAttribute="top" constant="20" id="ije-nw-VEd"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="1eu-oZ-lWE"/>
+                                    <exclude reference="BNk-19-Kfl"/>
+                                    <exclude reference="Cdj-xZ-oM6"/>
+                                    <exclude reference="azV-bM-ji3"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="WzR-fU-emm" firstAttribute="centerX" secondItem="qVs-8B-zbE" secondAttribute="centerX" id="6zw-9w-uwP"/>
+                        <constraint firstItem="WzR-fU-emm" firstAttribute="top" secondItem="qVs-8B-zbE" secondAttribute="top" id="GwT-8p-deA"/>
+                        <constraint firstItem="WzR-fU-emm" firstAttribute="leading" secondItem="qVs-8B-zbE" secondAttribute="leading" id="jR0-oC-qV9"/>
+                        <constraint firstItem="WzR-fU-emm" firstAttribute="height" secondItem="qVs-8B-zbE" secondAttribute="height" multiplier="0.95" id="ra1-B7-Yd6"/>
+                        <constraint firstAttribute="trailing" secondItem="WzR-fU-emm" secondAttribute="trailing" id="scx-ol-xnP"/>
+                        <constraint firstAttribute="bottom" secondItem="WzR-fU-emm" secondAttribute="bottom" id="yV5-hU-tZg"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="qVs-8B-zbE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="06s-W9-JLG"/>
+                <constraint firstAttribute="trailing" secondItem="qVs-8B-zbE" secondAttribute="trailing" id="IOi-R0-hrc"/>
+                <constraint firstAttribute="bottom" secondItem="qVs-8B-zbE" secondAttribute="bottom" id="Kcr-uL-o4A"/>
+                <constraint firstItem="qVs-8B-zbE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pKa-oi-2iQ"/>
+            </constraints>
+            <point key="canvasLocation" x="440" y="373"/>
+        </view>
+    </objects>
+</document>
